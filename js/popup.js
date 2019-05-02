@@ -10,10 +10,14 @@ function executeScriptToCurrentTab(code) {
 	});
 }
 
-$('#clean_page').click(() => {
-
+$('#read').click(() => {
 	getCurrentTabId((tabId) => {
 		chrome.tabs.executeScript(tabId, { file: './js/clean.js' });
-
 	});
+});
+
+$('#save').click(() => {
+	getCurrentTabId((tabId) => {
+		chrome.tabs.executeScript(tabId, { file: './js/clean.js' });
+});
 });
